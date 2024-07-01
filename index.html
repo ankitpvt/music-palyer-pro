@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Web Player with Waves and Slider</title>
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- WAVE SURFER JS LINK -->
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <img src="img/music.png" class="logo" alt="no preview">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/">ABOUT</a></li>
+                <li><a href="/">SPECIFICATIONS</a></li>
+                <li><a href="/">CONNECT</a></li>
+            </ul>
+        </div>
+
+        <!-- MUSIC CONTENT -->
+        <div class="content">
+            <div class="left-col">
+                <div class="playlist">
+                    <h2>Playlist</h2>
+                    <ul id="playlist">
+                        <li onclick="loadSong(0)">Phir Bhi Tumko Chahunga</li>
+                        <li onclick="loadSong(1)">Sajda</li>
+                        <li onclick="loadSong(2)">Chashni</li>
+                        <li onclick="loadSong(3)">Ishaqzaade</li>
+                        <li onclick="loadSong(4)">Ve kamleya</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--WAVES AND MUSIC INFO -->
+            <div class="right-col">
+                <div class="music-wave">
+                    <div id="waveform"></div>
+                </div>
+                <div class="right-col-n">
+                    <div class="div-circle">
+                        <div class="circle" onclick="prevSong()">
+                            <i class="fa fa-angle-left"></i>
+                        </div>
+                        <div class="circle">
+                            <i class="fa fa-bars"></i>
+                        </div>
+                    </div>
+                    <img src="img/Untitled design.jpg" alt="thumbnail" class="song-thumbnail" id="song-thumbnail">
+                    <h1 id="song-title">Song: Phir bhi tumko chahunga</h1>
+
+                    <span id="duration"></span>
+                    <input type="range" value="0" id="progress">
+                    <div class="controls">
+                        <div onclick="prevSong()">
+                            <i class="fa fa-backward"></i>
+                        </div>
+                        <div onclick="playPause()">
+                            <i class="fa fa-play" id="ctrlIcon"></i>
+                        </div>
+                        <div onclick="nextSong()">
+                            <i class="fa fa-forward"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     
+        <!-- <div class="playlist">
+            <h2>Playlist</h2>
+            <ul id="playlist">
+                <li onclick="loadSong(0)">Phir Bhi Tumko Chahunga</li>
+                <li onclick="loadSong(1)">Song 2</li>
+                <li onclick="loadSong(2)">Song 3</li>
+            </ul>
+        </div> -->
+    </div>
+
+    <!-- JS LINK -->
+    <script src="script.js"></script>
+</body>
+
+</html>
